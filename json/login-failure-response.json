@@ -1,0 +1,7 @@
+{
+    "status" : "failure",
+    "message" : "Login failed for [user@example.com]",
+    "payload" : null,
+    "sync" : null,
+    "errorCode" : "1001"
+}

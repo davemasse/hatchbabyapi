@@ -1,0 +1,21 @@
+{
+	"status": "success",
+	"message": "successfully fetched diapers",
+	"payload": {
+		"diapers": [
+			{
+				"id": 12345,
+				"createDate": "2018-01-01 00:00:00",
+				"updateDate": "2018-01-01 00:00:00",
+				"diaperType": "Both",
+				"diaperDate": "2018-01-01 00:00:00",
+				"category": "SCP",
+				"deleted": false,
+				"details": "",
+				"createDateInMemberTimeZone": "2018-01-01 00:00:00",
+				"updateDateInMemberTimeZone": "2018-01-01 00:00:00"
+			}
+		]
+	},
+	"sync": 1514764800000
+}

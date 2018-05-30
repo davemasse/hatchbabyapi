@@ -1,0 +1,37 @@
+{
+    "status" : "success",
+    "message" : "Successful login",
+    "payload" : {
+        "id" : 1,
+        "createDate" : "2018-01-01 00:00:00",
+        "updateDate" : "2018-01-01 00:00:00",
+        "active" : true,
+        "email" : "user@example.com",
+        "babies" : [ {
+            "id" : 1,
+            "createDate" : "2018-01-01 00:00:00",
+            "updateDate" : "2018-01-01 00:00:00",
+            "name" : "Child",
+            "birthDate" : "2018-01-01",
+            "dueDate" : "2018-01-01",
+            "gender" : "GENDER",
+            "birthWeight" : 3600,
+            "birthLength" : null,
+            "stage" : 53,
+            "lessThanTwoWeeksOld" : false,
+            "createDateInMemberTimeZone" : "2018-01-01 00:00:00",
+            "updateDateInMemberTimeZone" : "2018-01-01 00:00:00"
+        } ],
+        "defaultUnitOfMeasure" : "imperial",
+        "appType" : "iOS",
+        "firstName" : "Parent",
+        "lastName" : null,
+        "signupSource" : "app",
+        "timezone" : "America/New_York",
+        "timeZoneAdjust" : -4,
+        "createDateInMemberTimeZone" : "2018-01-01 00:00:00",
+        "updateDateInMemberTimeZone" : "2018-01-01 00:00:00"
+    },
+    "sync" : 0000000000000,
+    "token" : "..."
+}

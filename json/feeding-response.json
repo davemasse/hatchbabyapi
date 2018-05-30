@@ -1,0 +1,32 @@
+{
+	"status" : "success",
+	"message" : "successfully fetched feedings",
+	"payload" : {
+		"feedings" : [ {
+			"id" : 12345,
+			"createDate" : "2018-01-01 00:00:00",
+			"updateDate" : "2018-01-01 00:00:00",
+			"manualEntry" : false,
+			"amount" : 100.00,
+			"deleted" : true,
+			"startTime" : "2018-01-01 00:00:00",
+			"endTime" : "2018-01-01 00:00:00",
+			"durationInSeconds" : 240,
+			"feedingType" : null,
+			"startWeight" : 6900.000,
+			"endWeight" : 7000.000,
+			"lockStatus1" : "FW1",
+			"lockStatus2" : "FW2",
+			"details" : "",
+			"uniqueKey" : null,
+			"category" : "SCP",
+			"method" : null,
+			"source" : null,
+			"durationLeft" : null,
+			"durationRight" : null,
+			"createDateInMemberTimeZone" : "2018-01-01 00:00:00",
+			"updateDateInMemberTimeZone" : "2018-01-01 00:00:00"
+		} ]
+	},
+	"sync": 1514764800000
+}

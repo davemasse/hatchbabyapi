@@ -1,0 +1,86 @@
+FORMAT: 1A
+HOST: https://data.hatchbaby.com
+
+# Hatchbaby API
+
+# Group Hatchbaby API
+
+## Login [/public/v1/login]
+
+### Log in [POST]
+
++ Request (application/json)
+    + Body
+
+            {
+                "email": "user@example.com",
+                "password": "yourpassword"
+            }
+
++ Response 200 (application/json)
+    + Baby's `birthWeight` is provided in grams regardless of unit of measure selected in the app.
+    + `token` is a 70 character string
+    + Login success or failure both return an HTTP 200 status code with different content based on the outcome (`status` value will determine result).
+
+    + Body
+
+            <!-- include(json/login-response.json) -->
+            <!-- include(json/login-failure-response.json) -->
+
+## Diaper [/service/app/diaper/v1/fetch/{baby_id}]
+
+### Get Diaper records [GET /service/app/diaper/v1/fetch/{baby_id}]
+
+Get diaper records for the specified baby ID.
+
++ Parameters
+    + baby_id: `12345` (number, required) - Baby ID provided by the baby endpoint
+
++ Request (application/json)
+    + Headers
+
+            X-HatchBaby-Auth: {token}
+
++ Response 200 (application/json)
+    + Every diaper record ever recorded will be returned in the `diapers` array.
+    + `diaperType` can be Dirty, Wet, or Both
+    + `details` will be the text entered by the user adding the entry
+    + `sync` will be a timestamp with milliseconds
+
+    + Body
+
+            <!-- include(json/diaper-response.json) -->
+
+## Feeding [/service/app/feeding/v2/fetch/{baby_id}]
+
+### Get Feeding records [GET /service/app/feeding/v2/fetch/{baby_id}]
+
+Get feeding records for the specified baby ID.
+
++ Parameters
+    + baby_id: `12345` (number, required) - Baby ID provided by the baby endpoint
+
++ Request (application/json)
+    + Headers
+
+            X-HatchBaby-Auth: {token}
+
++ Response 200 (application/json)
+    + `amount`, `startWeight`, and `endWeight` are measured in grams
+    + `source` can be any of the following:
+      * Both
+      * Both_Ending_Left
+      * Both_Ending_Right
+      * Breastmilk
+      * Formula
+      * Left
+      * Right
+      * null
+    + `method` can be one of the following:
+      * Bottle
+      * Nursing
+      * null
+
+    + Body
+
+            <!-- include(json/feeding-response.json) -->
